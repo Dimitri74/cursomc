@@ -40,11 +40,11 @@ public class Pedido implements Serializable {
 	@Temporal(TemporalType.TIMESTAMP) 
 	private Date instante; 
 	 
-	@JsonManagedReference
+	//@JsonManagedReference
 	@OneToOne(cascade = CascadeType.ALL, mappedBy="pedido") 
 	private Pagamento pagamento; 
 	 
-	@JsonManagedReference
+	//@JsonManagedReference
 	@ManyToOne
 	@JoinColumn(name="cliente_id") 
 	private Cliente cliente; 
